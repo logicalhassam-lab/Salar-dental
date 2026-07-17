@@ -418,7 +418,7 @@ function WhyUsSection() {
               key={s.label}
               className={`rounded-2xl p-6 ${i === 0 ? 'bg-teal-600 text-white' : 'bg-white border border-slate-100 text-slate-900'}`}
             >
-              <p className={`text-3xl font-bold mb-1 ${i === 0 ? 'text-white' : 'text-teal-600'}`}>{s.big}</p>
+              <p className={`text-[1.6rem] sm:text-2xl md:text-3xl font-bold mb-1 truncate ${i === 0 ? 'text-white' : 'text-teal-600'}`}>{s.big}</p>
               <p className={`font-semibold text-sm ${i === 0 ? 'text-teal-100' : 'text-slate-800'}`}>{s.label}</p>
               <p className={`text-xs mt-0.5 ${i === 0 ? 'text-teal-300' : 'text-slate-400'}`}>{s.sub}</p>
             </div>
@@ -785,8 +785,9 @@ function Footer() {
           <div>
             <p className="text-white text-sm font-semibold mb-4">Contact</p>
             <ul className="space-y-2 text-sm">
-              <li>0320-2390907</li>
-              <li className="leading-snug">Shalimar, Street No 4, Colony, Multan</li>
+              <li><span className="text-slate-400">Call:</span> <a href="tel:+923202390907" className="hover:text-teal-400">0320-2390907</a></li>
+              <li><span className="text-slate-400">WhatsApp:</span> <a href={WHATSAPP_PRIMARY} target="_blank" rel="noopener noreferrer" className="hover:text-teal-400">0315-8511118</a></li>
+              <li className="leading-snug pt-1">Shalimar, Street No 4, Colony, Multan</li>
               <li className="text-teal-400">Open daily till 10 PM</li>
             </ul>
           </div>
