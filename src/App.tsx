@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import drKamranPhoto from '@/imports/image.jpg'
 
-const WHATSAPP_PRIMARY = "https://wa.me/923153921130"
-const PHONE_PRIMARY = "tel:+923202390907"
+const WHATSAPP_PRIMARY = "https://wa.me/923202390907"
+const PHONE_PRIMARY = "tel:+923158511118"
 
 const NAV_LINKS = [
   { label: "Home", href: "#home" },
@@ -227,7 +227,7 @@ function HeroSection() {
                 <div className="pt-3 border-t border-slate-100">
                   <div className="bg-teal-600 rounded-2xl p-4 text-white">
                     <p className="font-semibold text-sm mb-1">Book an Appointment</p>
-                    <p className="text-teal-200 text-xs">Call 0320-2390907 to reserve your slot today</p>
+                    <p className="text-teal-200 text-xs">Call 0315-8511118 to reserve your slot today</p>
                   </div>
                 </div>
               </div>
@@ -300,7 +300,7 @@ function AboutSection() {
               <a href={PHONE_PRIMARY}
                 className="flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white font-semibold px-5 py-3 rounded-xl transition-colors text-sm">
                 <svg viewBox="0 0 24 24" className="w-4 h-4 fill-white"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-                0320-2390907
+                0315-8511118
               </a>
               <a href={WHATSAPP_PRIMARY} target="_blank" rel="noopener noreferrer"
                 className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold px-5 py-3 rounded-xl transition-colors text-sm">
@@ -362,7 +362,7 @@ function ServicesSection() {
 function WhyUsSection() {
   return (
     <section className="py-20 sm:py-28 bg-slate-50">
-      <div className="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div className="max-w-6xl mx-auto px-3 sm:px-8 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         <div>
           <p className="text-teal-600 text-sm font-semibold uppercase tracking-widest mb-3">Why Patients Choose Us</p>
           <h2 className="section-heading text-4xl sm:text-5xl text-slate-900 leading-tight mb-6">
@@ -407,7 +407,7 @@ function WhyUsSection() {
         </div>
 
         {/* Stats block */}
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-3">
           {[
             { big: "Aesthetics", label: "Specialist Care", sub: "Smile Makeovers" },
             { big: "5.0★", label: "Google Rating", sub: "49 Reviews" },
@@ -416,10 +416,10 @@ function WhyUsSection() {
           ].map((s, i) => (
             <div
               key={s.label}
-              className={`rounded-2xl p-6 ${i === 0 ? 'bg-teal-600 text-white' : 'bg-white border border-slate-100 text-slate-900'}`}
+              className={`rounded-2xl p-3 sm:p-6 ${i === 0 ? 'bg-teal-600 text-white' : 'bg-white border border-slate-100 text-slate-900'}`}
             >
-              <p className={`text-[1.6rem] sm:text-2xl md:text-3xl font-bold mb-1 truncate ${i === 0 ? 'text-white' : 'text-teal-600'}`}>{s.big}</p>
-              <p className={`font-semibold text-sm ${i === 0 ? 'text-teal-100' : 'text-slate-800'}`}>{s.label}</p>
+              <p className={`text-lg sm:text-2xl md:text-3xl font-bold mb-1 leading-tight ${i === 0 ? 'text-white' : 'text-teal-600'}`}>{s.big}</p>
+              <p className={`font-semibold text-xs sm:text-sm ${i === 0 ? 'text-teal-100' : 'text-slate-800'}`}>{s.label}</p>
               <p className={`text-xs mt-0.5 ${i === 0 ? 'text-teal-300' : 'text-slate-400'}`}>{s.sub}</p>
             </div>
           ))}
@@ -569,7 +569,7 @@ function AppointmentSection() {
     const msg = encodeURIComponent(
       `Assalam o Alaikum! I'd like to book an appointment at Salar Dental & Aesthetics Care.\n\nName: ${form.name}\nPhone: ${form.phone}${form.date ? `\nDate: ${form.date}` : ''}${form.time ? `\nTime: ${form.time}` : ''}${form.message ? `\nNote: ${form.message}` : ''}`
     )
-    window.open(`https://wa.me/923153921130?text=${msg}`, '_blank')
+    window.open(`https://wa.me/923202390907?text=${msg}`, '_blank')
     setSent(true)
     setTimeout(() => setSent(false), 5000)
   }
@@ -588,8 +588,8 @@ function AppointmentSection() {
 
           <div className="space-y-3">
             {[
-              { icon: "phone", label: "Primary Number", val: "0320-2390907", href: "tel:+923202390907" },
-              { icon: "wa", label: "WhatsApp", val: "0315-8511118", href: WHATSAPP_PRIMARY },
+              { icon: "phone", label: "Primary Number", val: "0315-8511118", href: "tel:+923158511118" },
+              { icon: "wa", label: "WhatsApp", val: "0320-2390907", href: WHATSAPP_PRIMARY },
             ].map(c => (
               <a key={c.label} href={c.href} target={c.href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer"
                 className="flex items-center gap-4 p-4 border border-slate-100 hover:border-teal-200 rounded-xl transition-colors group">
@@ -700,7 +700,7 @@ function ContactSection() {
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-white border border-slate-100 rounded-2xl p-5">
                 <p className="text-xs text-slate-400 uppercase tracking-wider mb-3 font-medium">Phone</p>
-                <a href="tel:+923202390907" className="block text-slate-800 font-semibold text-sm hover:text-teal-600 transition-colors mb-1">0320-2390907</a>
+                <a href="tel:+923158511118" className="block text-slate-800 font-semibold text-sm hover:text-teal-600 transition-colors mb-1">0315-8511118</a>
               </div>
               <div className="bg-white border border-slate-100 rounded-2xl p-5">
                 <p className="text-xs text-slate-400 uppercase tracking-wider mb-3 font-medium">Hours</p>
@@ -785,8 +785,8 @@ function Footer() {
           <div>
             <p className="text-white text-sm font-semibold mb-4">Contact</p>
             <ul className="space-y-2 text-sm">
-              <li><span className="text-slate-400">Call:</span> <a href="tel:+923202390907" className="hover:text-teal-400">0320-2390907</a></li>
-              <li><span className="text-slate-400">WhatsApp:</span> <a href={WHATSAPP_PRIMARY} target="_blank" rel="noopener noreferrer" className="hover:text-teal-400">0315-8511118</a></li>
+              <li><span className="text-slate-400">Call:</span> <a href="tel:+923158511118" className="hover:text-teal-400">0315-8511118</a></li>
+              <li><span className="text-slate-400">WhatsApp:</span> <a href={WHATSAPP_PRIMARY} target="_blank" rel="noopener noreferrer" className="hover:text-teal-400">0320-2390907</a></li>
               <li className="leading-snug pt-1">Shalimar, Street No 4, Colony, Multan</li>
               <li className="text-teal-400">Open daily till 10 PM</li>
             </ul>
